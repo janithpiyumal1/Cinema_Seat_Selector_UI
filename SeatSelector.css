@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Movie selector container */
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Container for the seating layout */
+.container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+/* Style for the screen */
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Styling for seats */
+.seat {
+    background-color: #444451;
+    height: 26px;
+    width: 32px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+}
+
+/* Row containing seats */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Hover effect for available seats */
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* Style for selected seat */
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+/* Style for occupied seats */
+.seat.occupied {
+    background-color: #ffffff;
+}
+
+/* Layout for the seating sections (left, center, right) */
+.seating-layout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.section {
+    margin: 10px;
+}
+
+/* Styling for the legend */
+.legend {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+/* Style for individual legend seats */
+.legend-seat {
+    background-color: #444451;
+    height: 26px;
+    width: 32px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: inline-block;
+}
+
+/* Selected legend seat color */
+.legend-seat.selected {
+    background-color: #6feaf6; /* Same as selected seat color in the layout */
+}
+
+/* Occupied legend seat color */
+.legend-seat.occupied {
+    background-color: #ffffff; /* Same as occupied seat color in the layout */
+}
+
+/* Styling for the text below the seating layout */
+.legend li small {
+    margin-left: 5px;
+    color: #fff;
+}
+
+/* Styling for the selected count and total */
+.text {
+    margin-top: 20px;
+    font-size: 18px;
+}
